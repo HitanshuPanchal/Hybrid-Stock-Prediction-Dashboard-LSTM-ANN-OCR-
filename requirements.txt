@@ -1,0 +1,14 @@
+streamlit
+numpy
+pandas
+yfinance
+tensorflow-cpu==2.13.0
+scikit-learn
+plotly
+easyocr
+Pillow
+python-bidi
+opencv-python-headless
+torch
+torchvision
+tqdm
