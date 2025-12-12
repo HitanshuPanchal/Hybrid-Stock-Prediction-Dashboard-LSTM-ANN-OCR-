@@ -1,15 +1,18 @@
 services:
-  - type: web
-    name: hybrid-stock-forecast
-    runtime: python
-    buildCommand: |
-      apt-get update && apt-get install -y libgl1 libglib2.0-0
-      pip install -r requirements.txt
-    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.10
-    disk:
-      name: models
-      mountPath: /opt/render/project/data
-      sizeGB: 2
+- type: web
+name: hybrid-stock-forecast
+runtime: python
+region: oregon
+plan: free
+buildCommand: |
+apt-get update && apt-get install -y libgl1 libglib2.0-0
+pip install --upgrade pip
+pip install -r requirements.txt
+startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+envVars:
+- key: PYTHON_VERSION
+value: 3.10
+disk:
+name: models
+mountPath: /opt/render/project/data
+sizeGB: 2
