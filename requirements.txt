@@ -10,3 +10,4 @@ Pillow
 python-bidi
 opencv-python-headless
 tqdm
+gunicorn
