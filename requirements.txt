@@ -9,6 +9,4 @@ easyocr
 Pillow
 python-bidi
 opencv-python-headless
-torch
-torchvision
 tqdm
